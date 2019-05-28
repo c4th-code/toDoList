@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="container">
+
+        {{ form_start(form) }}
+            <div class="row">
+                <div class='col-4'> {{ form_widget(form.title) }}</div>
+                <div class='col-2'> <button class="btn">{{button_label|default('+')}}</button></div>
+            </div>    
+        {{ form_end(form) }}
+
+    </div>
+    <div class="container">
+        <ul>
+            {% for task in tasks %}
+                <li>
+                    <a href="/task/update/{{ task.id }}">
+                    {% if task.status %}
+                        <strike>{{ task.title }} </strike>
+                    {% else %}
+                        {{ task.title }}
+                    {% endif %}
+                    </a>
+                </li>
+            {% endfor %}
+
+        </ul>
+
+    </div>
+{% endblock %}
