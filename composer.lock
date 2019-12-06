@@ -416,7 +416,7 @@
                 "doctrine/orm": "^2.6",
                 "php-coveralls/php-coveralls": "^2.1",
                 "phpunit/phpunit": "7.0",
-                "symfony/cache": "^3.4|^4.1",
+                "symfony/cache": "4.2.12",
                 "symfony/phpunit-bridge": "^4.2",
                 "symfony/property-info": "^3.4|^4.1",
                 "symfony/validator": "^3.4|^4.1",
